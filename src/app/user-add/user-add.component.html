@@ -1,0 +1,22 @@
+
+
+
+
+<div class="user-add">
+  <div>
+    <label for="username">Your username</label>
+  </div>
+  <div>
+    <input type="text"
+           name="username"
+           id="username"
+           class="input-box"
+           [(ngModel)]="username" placeholder="Type your username">
+  </div>
+  <div>
+    <button class="input-box" (click)="saveUser()">
+      OK...
+    </button>
+  </div>
+
+</div>

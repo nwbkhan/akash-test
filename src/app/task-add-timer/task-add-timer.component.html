@@ -1,0 +1,22 @@
+
+<div class="task-timer">
+  <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(110,110)">
+      <circle r="100" class="e-c-base"></circle>
+      <g transform="rotate(-90)">
+        <circle r="100" class="e-c-progress" style="stroke-dasharray: 628.319; stroke-dashoffset: -1256.64;"></circle>
+        <g id="e-pointer" style="transform: rotate(360deg);">
+          <circle cx="100" cy="0" r="8" class="e-c-pointer"></circle>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <div class="bottom">
+    <span >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -2 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon red-timer-icon"><path d="M9 11h2a1 1 0 0 1 0 2H8a.997.997 0 0 1-1-1V8a1 1 0 1 1 2 0v3zM1.869 6.861a1.5 1.5 0 1 1 2.077-1.76 7.967 7.967 0 0 1 1.126-.548A2.5 2.5 0 0 1 6.5 0h3a2.5 2.5 0 0 1 1.428 4.553c.39.154.767.337 1.126.548a1.5 1.5 0 1 1 2.077 1.76 8 8 0 1 1-12.263 0zM8 18A6 6 0 1 0 8 6a6 6 0 0 0 0 12zM6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3z"></path></svg>
+    </span>
+    <span [class.hide]="!taskName && !time && !date">
+      <svg   xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon save-btn"><path d="M5.486 9.73a.997.997 0 0 1-.707-.292L.537 5.195A1 1 0 1 1 1.95 3.78l3.535 3.535L11.85.952a1 1 0 0 1 1.415 1.414L6.193 9.438a.997.997 0 0 1-.707.292z"></path></svg>
+    </span>
+  </div>
+</div>
