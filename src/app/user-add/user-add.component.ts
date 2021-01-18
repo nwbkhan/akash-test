@@ -19,7 +19,7 @@ export class UserAddComponent implements OnInit {
 
   saveUser(): void {
     this.userService.saveUser(this.username);
-    this.router.navigate([this.username]);
+    this.router.navigate(['u/' + this.username]);
   }
 
 }

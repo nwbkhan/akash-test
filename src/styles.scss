@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+
+.input-box {
+  outline: 0;
+  line-height: 2;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  letter-spacing: 1.2pt;
+  font-family: verdana, serif;
+  margin: 10px 0;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+input, button {
+  width: 100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+
+.hide {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-box:focus {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container .topbar-container,
+.ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container {
+  width: auto !important;
+}
+
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .day-unit,
+.ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .year-unit,
+.ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .day-unit,
+.ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .year-unit {
+ height: 48px !important;
+  color: white !important;
+}
+
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container {
+  width: 100% !important;
+}
+
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container .topbar-container .topbar-title {
+  color: white !important;
+}

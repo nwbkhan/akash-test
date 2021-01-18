@@ -2,37 +2,14 @@
   padding: 15px;
 }
 
-
-.input-box {
-  outline: 0;
-  background: rgba(255, 255, 255, 0.5);
-  border: 2px solid transparent;
-  padding: 5px 10px;
-  color: white;
-  border-radius: 6px;
-  font-weight: bold;
-  letter-spacing: 1.2pt;
-  font-family: verdana, serif;
-}
-
 .tasks-header {
 
   display: flex;
   justify-content: space-between;
 }
 
-
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 1; /* Firefox */
+.username {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-left: 10px;
 }
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: white;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: white;
-}
-

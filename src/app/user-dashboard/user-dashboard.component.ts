@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, ActivatedRouteSnapshot, Router} from '@angular/router';
+import {FormControl} from '@angular/forms';
+import {UserService} from '../services/user.service';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -8,14 +10,17 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class UserDashboardComponent implements OnInit {
 
-  usernameLoggedIn: string;
   timeToAdd: string;
-  taskName: string;
+  taskName: FormControl = new FormControl('');
   dateToAdd: string;
   username: string;
 
   constructor(private route: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private userService: UserService) {
+    this.route.params.subscribe(params => {
+      this.username = params.username;
+    });
   }
 
   ngOnInit(): void {

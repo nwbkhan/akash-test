@@ -30,15 +30,15 @@ export class UserActiveGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     let userPresent = false;
-    const params = this.collectRouteParams(this.router);
+    const params = route.paramMap;
 
-    const usernameLoggedIn = params.username;
+    const usernameLoggedIn = params.get('username');
     // navigate to user-add component
     if (!usernameLoggedIn) {
       this.gotoUserAddScreen();
     }
     // check the user present in the system or not
-    if (this.userService.isUserPresent(usernameLoggedIn)) {
+    if (!this.userService.isUserPresent(usernameLoggedIn)) {
       // user not found, redirect to user-add
       this.gotoUserAddScreen();
     }
@@ -50,6 +50,6 @@ export class UserActiveGuard implements CanActivate {
 
 
   private gotoUserAddScreen(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['user-add']);
   }
 }

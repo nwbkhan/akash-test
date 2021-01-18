@@ -8,7 +8,11 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { TaskAddTimerComponent } from './task-add-timer/task-add-timer.component';
 import { TaskListsComponent } from './task-lists/task-lists.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {faArrowLeft, faCalendarAlt, faCheck, faClock, faListUl, faTh, faWindowClose} from '@fortawesome/free-solid-svg-icons';
+import {NgxMaskModule} from 'ngx-mask';
+import {NgDatepickerModule} from 'ng2-datepicker';
 
 
 @NgModule({
@@ -24,9 +28,19 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    // FormsModule
+    NgxMaskModule.forRoot(),
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    NgDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(library: FaIconLibrary) {
+
+    // Add an icon to the library for convenient access in other components
+    library.addIcons(faTh, faListUl, faWindowClose, faCalendarAlt, faClock, faArrowLeft, faCheck);
+  }
+}
